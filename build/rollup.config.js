@@ -1,9 +1,11 @@
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
-import configs from './config'
+import copy from 'rollup-plugin-copy'
+import configs from './config.js'
 
 const externals = [
-  'lottie'
+  'lottie-web',
+  'vue'
 ]
 
 const genTsPlugin = (configOpts) => typescript({
@@ -35,15 +37,24 @@ const genPlugins = (configOpts) => {
     plugins.push(...configOpts.plugins.post)
   }
 
+  plugins.push(copy({
+    targets: [
+      { src: 'package.json', dest: 'dist/' },
+      { src: 'src/lib', dest: 'dist/types' },
+    ],
+    hook: 'writeBundle', // 钩子，插件运行在rollup完成打包并将文件写入磁盘之前
+    verbose: true
+  }))
+
   return plugins
 }
 
 const genConfig = (configOpts) => ({
-  input: 'src/index.tsx',
+  input: 'src/index.ts',
   output: {
     file: configOpts.output,
     format: configOpts.format,
-    name: 'vue3-UseAnimations',
+    name: 'vue3-useAnimations',
     sourcemap: true,
     exports: 'named',
     globals: configOpts.globals

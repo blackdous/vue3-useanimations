@@ -5,14 +5,14 @@ export default {
     output: 'dist/umd/index.js',
     format: 'umd',
     target: 'es5',
-    globals: { deepmerge: 'deeepmerge' },
+    globals: { lottie: 'lottie-web' },
     env: 'development'
   },
   umdMin: {
     output: 'dist/umd/index.min.js',
     format: 'umd',
     target: 'es5',
-    globals: { deepmerge: 'deepmerge' },
+    globals: { lottie: 'lottie-web' },
     plugins: {
       post: [uglify()]
     },

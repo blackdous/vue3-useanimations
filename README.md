@@ -57,46 +57,68 @@ These props are available:
 <br />
 Controlled checkbox example  
 
-```javascript
-export const RadioButton = () => {
-  // JUST EXAMPLE - THIS PART OF THE STATE WILL PROBABLY COME FROM A PARENT FORM COMPONENT
-  const [checked, setChecked] = useState(true);
+```js
+<template>
+  <div style="padding: 20px ">
+    <span>radioButton</span>
+    <UseAnimations
+      :reverse="checked"
+      @click="handleClick"
+      :size="40"
+      :wrapperStyle="{ marginTop: '5px' }"
+      :animation="radioButton"
+    />
+  </div>
+</template>
 
-  return (
-    <div style={{ padding: '20px' }}>
-      <span>radioButton</span>
-      <UseAnimation
-        reverse={checked}
-        onClick={() => {
-          setChecked(!checked);
-        }}
-        size={40}
-        wrapperStyle={{ marginTop: '5px' }}
-        animation={radioButton}
-      />
-    </div>
-  );
-};
+<script lang='ts' setup>
+import { ref } from 'vue'
+import { UseAnimations } from 'vue3-useanimations'
+import radioButton from 'vue3-useanimations/dist/types/lib/radioButton'
+
+const checked = ref(false)
+
+const handleClick = () => {
+  checked.value = !checked.value
+}
+</script>
+
 ```
 
 Animation wrapped in element (use render prop).
+
 ```javascript
-export const WrapperElement = () => {
-  return (
-    <UseAnimation
-      animation={heart}
-      size={60}
-      onClick={() => {
-        // eslint-disable-next-line
-        console.log('additional onClick cb is working');
-      }}
-      render={(eventProps, animationProps) => (
-        <button style={{ padding: '20px' }} type="button" {...eventProps}>
-          <div {...animationProps} />
-        </button>
-      )}
-    />
-  );
-};
+
+<template>
+
+  <UseAnimations
+    :animation={heart}
+    :size="60"
+    @click="handleClick"
+    :render="renderFunc"
+  >
+  </UseAnimations>
+</template>
+
+<script lang='ts' setup>
+import { h } from 'vue'
+import { UseAnimations } from 'vue3-useanimations'
+import heart from 'vue3-useanimations/dist/types/lib/heart'
+
+const renderFunc = (eventProps: any, animationProps: any) => {
+  return h('button', {
+    style: { padding: '20px' },
+    type: 'button',
+    ...eventProps
+  }, h('div', { ...animationProps }))
+}
+
+const handleClick = () => {
+  console.log('additional onClick cb is working');
+}
+</script>
+
 ```
- Note that `eventProps` consists of `onClick`, `mouseOver` and other DOM events which you probably want to assign to your wrapping element (e.g. Button) and `animationProps` consist of an actual animation which you should spread inside a simple `<div>`   
+
+ Note that `eventProps` consists of `onClick`, `mouseOver` and other DOM events which you probably want to assign to your wrapping element (e.g. Button) and `animationProps` consist of an actual animation which you should spread inside a simple `<div>`
+  

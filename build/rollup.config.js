@@ -1,9 +1,11 @@
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
+import copy from 'rollup-plugin-copy'
 import configs from './config.js'
 
 const externals = [
-  'lottie-web'
+  'lottie-web',
+  'vue'
 ]
 
 const genTsPlugin = (configOpts) => typescript({
@@ -34,6 +36,14 @@ const genPlugins = (configOpts) => {
   if (configOpts.plugins && configOpts.plugins.post) {
     plugins.push(...configOpts.plugins.post)
   }
+
+  plugins.push(copy({
+    targets: [
+      { src: 'src/lib', dest: 'dist/types/' },
+    ],
+    hook: 'writeBundle', // 钩子，插件运行在rollup完成打包并将文件写入磁盘之前
+    verbose: true
+  }))
 
   return plugins
 }

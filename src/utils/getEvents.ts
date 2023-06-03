@@ -12,16 +12,16 @@ const getClickPlayEvents = (animation: any) => ({
 });
 
 const getHoverPlayAndStop = (animation: any) => ({
-  onMouseEnter: () => animation.play(),
-  onMouseLeave: () => animation.stop(),
+  onMouseenter: () => animation.play(),
+  onMouseleave: () => animation.stop(),
 });
 
 const getHoverPlayBackwardsEvents = (animation: any) => ({
-  onMouseEnter: () => {
+  onMouseenter: () => {
     animation.setDirection(1);
     animation.play();
   },
-  onMouseLeave: () => {
+  onMouseleave: () => {
     animation.setDirection(-1);
     animation.play();
   },

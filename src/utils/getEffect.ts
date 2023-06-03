@@ -54,6 +54,8 @@ const animations: Animations = {
   microphone2: 'CLICK_PLAY_AND_BACKWARDS',
   notification: 'CLICK_PLAY_AND_BACKWARDS',
   notification2: 'CLICK_PLAY_AND_BACKWARDS',
+  notification3: 'LOOP_PLAY',
+  notification4: 'LOOP_PLAY',
   playPause: 'CLICK_PLAY_AND_BACKWARDS',
   playPauseCircle: 'CLICK_PLAY_AND_BACKWARDS',
   plusToX: 'CLICK_PLAY_AND_BACKWARDS',

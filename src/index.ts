@@ -1,6 +1,6 @@
 import lottie from "lottie-web";
 import type { AnimationItem, AnimationConfigWithData, AnimationConfig } from 'lottie-web';
-import { ref, defineComponent, PropType, watch, onMounted, unref } from 'vue'
+import { ref, defineComponent, PropType, watch, onMounted, unref, h, ExtractPropTypes, computed } from 'vue'
 
 import { getEffect, getEvents } from './utils';
 import type { Animation, AnimationEffect } from './utils';
@@ -9,6 +9,9 @@ const getRandomId = (key: Animation['animationKey']) =>
   `${key}_i${Math.floor(Math.random() * 10000 + 1)}`;
 
 const propsObj = {
+  effectType: {
+    type: String as PropType<AnimationEffect>
+  },
   animation: {
     type: Object as PropType<Animation>
   },
@@ -26,30 +29,34 @@ const propsObj = {
   onClick: Function
 }
 
+export declare type PropsType = Partial<ExtractPropTypes<typeof propsObj>>
+
 export const UseAnimations = defineComponent({
   name: 'UseAnimations',
   props: propsObj,
-  setup ({
-    animation: { animationData, animationKey },
-    reverse = false,
-    size = 24,
-    speed = 1,
-    strokeColor,
-    fillColor,
-    pathCss,
-    loop,
-    autoplay,
-    wrapperStyle,
-    options,
-    onClick,
-    render,
-    ...other
-  }) {
+  setup (props) {
+    const {
+      // @ts-ignore
+      animation: { animationData, animationKey },
+      reverse = false,
+      size = 24,
+      speed = 1,
+      strokeColor,
+      fillColor,
+      pathCss,
+      loop,
+      autoplay,
+      wrapperStyle,
+      options,
+      onClick,
+      render,
+      effectType,
+      ...other
+    } = props
     const animation = ref<AnimationItem>()
     const animationId = ref<string>(getRandomId(animationKey))
     const events = ref<any>()
     const refCur = ref(null)
-
     const defaultStyles = {
       overflow: 'hidden',
       outline: 'none',
@@ -58,8 +65,9 @@ export const UseAnimations = defineComponent({
       ...wrapperStyle,
     }
 
+    const animEffect: AnimationEffect = effectType || getEffect(animationKey) as AnimationEffect;
     onMounted(() => {
-      const animEffect: AnimationEffect = getEffect(animationKey) as AnimationEffect;
+      // console.log('animEffect: ', animEffect);
 
       const defaultOptions: AnimationConfigWithData = {
         //@ts-ignore
@@ -78,7 +86,8 @@ export const UseAnimations = defineComponent({
         },
         ...options,
       };
-        // @ts-ignore
+  
+      // @ts-ignore
       animation.value = lottie.loadAnimation(defaultOptions)
     })
 
@@ -144,10 +153,14 @@ export const UseAnimations = defineComponent({
           animation: animation,
           reverse,
           //@ts-ignore
-          animEffect: getEffect(animationKey),
+          animEffect: animEffect || getEffect(animationKey),
         })
-      : undefined;
+        : undefined;
         
+      // console.log('getEffect(animationKey): ', getEffect(animationKey));
+      // console.log('curEvents: ', curEvents)
+      // console.log('animEffect: ', animEffect)
+    
       if (curEvents) {
         events.value = curEvents
       }
@@ -160,23 +173,27 @@ export const UseAnimations = defineComponent({
       }
     })
 
-    const eventProps = {
-      ...events,
-      onClick: (e: Event) => {
-        if (onClick) onClick(e);
-        if (events.value && 'onClick' in unref(events)) events.value.onClick();
-      },
-    };
-  
-    const animationProps = {
-      ref: refCur,
-      ...other,
-      style: defaultStyles,
-    };
+    const eventProps = computed(() => {
+      return {
+        ...events.value,
+        onClick: (e: Event) => {
+          if (onClick) onClick(e, unref(animation));
+          if (events.value && 'onClick' in unref(events)) events.value.onClick();
+        },
+      }
+    })
+
+    const animationProps = computed(() => {
+      return {
+        ref: refCur,
+        ...other,
+        style: defaultStyles,
+      }
+    })
     
 
     return () => {
-      return render ? render(eventProps, animationProps) : <div {...eventProps} {...animationProps} />;
+      return render ? render(eventProps.value, animationProps.value) : h('div', { ...eventProps.value, ...animationProps.value });
     }
 
 

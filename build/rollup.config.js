@@ -1,9 +1,9 @@
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
-import configs from './config'
+import configs from './config.js'
 
 const externals = [
-  'lottie'
+  'lottie-web'
 ]
 
 const genTsPlugin = (configOpts) => typescript({
@@ -39,7 +39,7 @@ const genPlugins = (configOpts) => {
 }
 
 const genConfig = (configOpts) => ({
-  input: 'src/index.tsx',
+  input: 'src/index.ts',
   output: {
     file: configOpts.output,
     format: configOpts.format,

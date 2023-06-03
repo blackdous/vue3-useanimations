@@ -1,6 +1,6 @@
 {
   "name": "vue3-useanimations",
-  "version": "0.0.1",
+  "version": "0.0.14",
   "description": "vue3-useanimations is a collection of free animated open source icons for vue.js.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -13,6 +13,7 @@
   "jsdelivr": "dist/umd/index.min.js",
   "typings": "dist/types/index.d.ts",
   "types": "dist/types/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
@@ -69,8 +70,10 @@
     "@types/node": "^20.2.1",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
+    "@vue/compiler-sfc": "^3.3.4",
     "@vue/test-utils": "^2.3.2",
     "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
@@ -79,13 +82,18 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "rollup": "^3.22.0",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "rollup-plugin-vue": "^6.0.0",
     "ts-jest": "^29.1.0",
+    "tslib": "^2.5.2",
     "typescript": "^5.0.4",
-    "vue": "^3.3.4"
+    "vue": "^3.2.47",
+    "vue-tsc": "^1.4.2"
   }
 }

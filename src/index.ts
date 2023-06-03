@@ -1,6 +1,6 @@
 import lottie from "lottie-web";
 import type { AnimationItem, AnimationConfigWithData, AnimationConfig } from 'lottie-web';
-import { ref, defineComponent, PropType, watch, onMounted, unref, createVNode, ExtractPropTypes, computed } from 'vue'
+import { ref, defineComponent, PropType, watch, onMounted, unref, h, ExtractPropTypes, computed } from 'vue'
 
 import { getEffect, getEvents } from './utils';
 import type { Animation, AnimationEffect } from './utils';
@@ -9,6 +9,9 @@ const getRandomId = (key: Animation['animationKey']) =>
   `${key}_i${Math.floor(Math.random() * 10000 + 1)}`;
 
 const propsObj = {
+  effectType: {
+    type: String as PropType<AnimationEffect>
+  },
   animation: {
     type: Object as PropType<Animation>
   },
@@ -33,6 +36,7 @@ export const UseAnimations = defineComponent({
   props: propsObj,
   setup (props) {
     const {
+      // @ts-ignore
       animation: { animationData, animationKey },
       reverse = false,
       size = 24,
@@ -46,6 +50,7 @@ export const UseAnimations = defineComponent({
       options,
       onClick,
       render,
+      effectType,
       ...other
     } = props
     const animation = ref<AnimationItem>()
@@ -60,8 +65,9 @@ export const UseAnimations = defineComponent({
       ...wrapperStyle,
     }
 
+    const animEffect: AnimationEffect = effectType || getEffect(animationKey) as AnimationEffect;
     onMounted(() => {
-      const animEffect: AnimationEffect = getEffect(animationKey) as AnimationEffect;
+      // console.log('animEffect: ', animEffect);
 
       const defaultOptions: AnimationConfigWithData = {
         //@ts-ignore
@@ -147,10 +153,14 @@ export const UseAnimations = defineComponent({
           animation: animation,
           reverse,
           //@ts-ignore
-          animEffect: getEffect(animationKey),
+          animEffect: animEffect || getEffect(animationKey),
         })
-      : undefined;
+        : undefined;
         
+      // console.log('getEffect(animationKey): ', getEffect(animationKey));
+      // console.log('curEvents: ', curEvents)
+      // console.log('animEffect: ', animEffect)
+    
       if (curEvents) {
         events.value = curEvents
       }
@@ -165,7 +175,7 @@ export const UseAnimations = defineComponent({
 
     const eventProps = computed(() => {
       return {
-        ...events,
+        ...events.value,
         onClick: (e: Event) => {
           if (onClick) onClick(e, unref(animation));
           if (events.value && 'onClick' in unref(events)) events.value.onClick();
@@ -183,7 +193,7 @@ export const UseAnimations = defineComponent({
     
 
     return () => {
-      return render ? render(eventProps.value, animationProps.value) : createVNode('div', { ...eventProps.value, ...animationProps.value });
+      return render ? render(eventProps.value, animationProps.value) : h('div', { ...eventProps.value, ...animationProps.value });
     }
 
 

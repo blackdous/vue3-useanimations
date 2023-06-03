@@ -1,6 +1,6 @@
 import lottie from "lottie-web";
 import type { AnimationItem, AnimationConfigWithData, AnimationConfig } from 'lottie-web';
-import { ref, defineComponent, PropType, watch, onMounted, unref, h, ExtractPropTypes } from 'vue'
+import { ref, defineComponent, PropType, watch, onMounted, unref, createVNode, ExtractPropTypes, computed } from 'vue'
 
 import { getEffect, getEvents } from './utils';
 import type { Animation, AnimationEffect } from './utils';
@@ -46,6 +46,7 @@ export const UseAnimations = defineComponent({
       options,
       onClick,
       render,
+      ...other
     } = props
     const animation = ref<AnimationItem>()
     const animationId = ref<string>(getRandomId(animationKey))
@@ -79,7 +80,8 @@ export const UseAnimations = defineComponent({
         },
         ...options,
       };
-        // @ts-ignore
+  
+      // @ts-ignore
       animation.value = lottie.loadAnimation(defaultOptions)
     })
 
@@ -161,23 +163,27 @@ export const UseAnimations = defineComponent({
       }
     })
 
-    const eventProps = {
-      ...events,
-      onClick: (e: Event) => {
-        if (onClick) onClick(e);
-        if (events.value && 'onClick' in unref(events)) events.value.onClick();
-      },
-    };
-  
-    const animationProps = {
-      ref: refCur,
-      ...props,
-      style: defaultStyles,
-    };
+    const eventProps = computed(() => {
+      return {
+        ...events,
+        onClick: (e: Event) => {
+          if (onClick) onClick(e, unref(animation));
+          if (events.value && 'onClick' in unref(events)) events.value.onClick();
+        },
+      }
+    })
+
+    const animationProps = computed(() => {
+      return {
+        ref: refCur,
+        ...other,
+        style: defaultStyles,
+      }
+    })
     
 
     return () => {
-      return render ? render(eventProps, animationProps) : h('div', {...eventProps, ...animationProps});
+      return render ? render(eventProps.value, animationProps.value) : createVNode('div', { ...eventProps.value, ...animationProps.value });
     }
 
 

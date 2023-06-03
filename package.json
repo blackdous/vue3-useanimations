@@ -1,6 +1,6 @@
 {
   "name": "vue3-useanimations",
-  "version": "0.0.1",
+  "version": "0.0.10",
   "description": "vue3-useanimations is a collection of free animated open source icons for vue.js.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,6 +20,9 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf dist && rollup -c build/rollup.config.js",
+    "build:vite": "rimraf dist && npm run build:es && npm run build:umd",
+    "build:es": "cross-env build=es vite build",
+    "build:umd": "cross-env build=umd vite build",
     "test:watch": "jest --testPathIgnorePatterns test/performance --watch",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint": "npx eslint --ext .js,.jsx,.ts,.tsx ./src",
@@ -70,8 +73,13 @@
     "@types/node": "^20.2.1",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
+    "@vitejs/plugin-legacy": "^4.0.4",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "@vue/compiler-sfc": "^3.3.4",
     "@vue/test-utils": "^2.3.2",
     "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
@@ -86,9 +94,18 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "rollup-plugin-vue": "^6.0.0",
     "ts-jest": "^29.1.0",
     "tslib": "^2.5.2",
     "typescript": "^5.0.4",
-    "vue": "^3.3.4"
+    "unplugin-vue-components": "^0.25.0",
+    "unplugin-vue-define-options": "^1.3.7",
+    "vite": "^4.3.9",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-dts": "^1.4.3",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue": "^3.2.47",
+    "vue-tsc": "^1.4.2"
   }
 }

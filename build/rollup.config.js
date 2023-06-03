@@ -1,11 +1,12 @@
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
 import copy from 'rollup-plugin-copy'
+import vue from 'rollup-plugin-vue'
 import configs from './config.js'
 
 const externals = [
-  'lottie-web',
-  'vue'
+  'vue',
+  'lottie-web'
 ]
 
 const genTsPlugin = (configOpts) => typescript({
@@ -39,12 +40,12 @@ const genPlugins = (configOpts) => {
 
   plugins.push(copy({
     targets: [
-      { src: 'package.json', dest: 'dist/' },
       { src: 'src/lib', dest: 'dist/types' },
     ],
     hook: 'writeBundle', // 钩子，插件运行在rollup完成打包并将文件写入磁盘之前
     verbose: true
   }))
+  plugins.push(vue())
 
   return plugins
 }

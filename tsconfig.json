@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "preserve",
     "module": "es2015",
     "moduleResolution": "node",
     "target": "es2015",
@@ -31,6 +32,7 @@
   ],
   "exclude": [
     "node_modules",
-    "test/**/*"
+    "test/**/*",
+    "src/lib/**/*"
   ]
 }

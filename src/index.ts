@@ -31,7 +31,7 @@ const propsObj = {
 
 export declare type PropsType = Partial<ExtractPropTypes<typeof propsObj>>
 
-export const UseAnimations = defineComponent({
+const UseAnimations = defineComponent({
   name: 'UseAnimations',
   props: propsObj,
   setup (props) {
@@ -195,7 +195,7 @@ export const UseAnimations = defineComponent({
     return () => {
       return render ? render(eventProps.value, animationProps.value) : h('div', { ...eventProps.value, ...animationProps.value });
     }
-
-
   }
 })
+
+export default UseAnimations

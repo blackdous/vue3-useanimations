@@ -1,6 +1,7 @@
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
 import copy from 'rollup-plugin-copy'
+import babel from 'rollup-plugin-babel';
 import configs from './config.js'
 
 const externals = [
@@ -36,6 +37,10 @@ const genPlugins = (configOpts) => {
   if (configOpts.plugins && configOpts.plugins.post) {
     plugins.push(...configOpts.plugins.post)
   }
+
+  plugins.push(babel({
+    exclude: 'node_modules/**'
+  }))
 
   plugins.push(copy({
     targets: [

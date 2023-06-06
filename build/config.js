@@ -5,7 +5,7 @@ export default {
     output: 'dist/umd/index.js',
     format: 'umd',
     target: 'es5',
-    env: 'development'
+    env: 'production'
   },
   umdMin: {
     output: 'dist/umd/index.min.js',

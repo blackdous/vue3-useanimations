@@ -10,7 +10,7 @@
     "test": "jest",
     "build": "vitepress build",
     "docs:dev": "vitepress dev",
-    "dev": "vitepress dev",
+    "dev": "vitepress dev --port=4005",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
@@ -46,8 +46,10 @@
     "testURL": "http://localhost/"
   },
   "dependencies": {
+    "ant-design-vue": "^3.2.20",
     "core-js": "^3.30.2",
-    "lottie-web": "^5.11.0"
+    "lottie-web": "^5.11.0",
+    "vue3-useanimations": "^0.0.18"
   },
   "devDependencies": {
     "@types/jest": "^29.5.1",

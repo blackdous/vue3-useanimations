@@ -23,3 +23,8 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<Basic></Basic>
+
+<script setup>
+  import Basic from './demo/basic.vue'
+</script>

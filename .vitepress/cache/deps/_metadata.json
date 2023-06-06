@@ -1,0 +1,122 @@
+{
+  "hash": "ea9eb8d1",
+  "browserHash": "28628573",
+  "optimized": {
+    "vue": {
+      "src": "../../../node_modules/.pnpm/vue@3.3.4/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "19b9817f",
+      "needsInterop": false
+    },
+    "@theme/index": {
+      "src": "../../../node_modules/.pnpm/vitepress@1.0.0-beta.1_@algolia+client-search@4.17.1_@types+node@20.2.5/node_modules/vitepress/dist/client/theme-default/index.js",
+      "file": "@theme_index.js",
+      "fileHash": "e74e15d1",
+      "needsInterop": false
+    },
+    "vue3-useanimations": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/esm/index.js",
+      "file": "vue3-useanimations.js",
+      "fileHash": "e1c01f41",
+      "needsInterop": false
+    },
+    "ant-design-vue": {
+      "src": "../../../node_modules/.pnpm/ant-design-vue@3.2.20_vue@3.3.4/node_modules/ant-design-vue/es/index.js",
+      "file": "ant-design-vue.js",
+      "fileHash": "b92f1e9b",
+      "needsInterop": false
+    },
+    "vue3-useanimations/dist/types/lib/visibility2": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/visibility2/index.js",
+      "file": "vue3-useanimations_dist_types_lib_visibility2.js",
+      "fileHash": "c412f2c3",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/searchToX": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/searchToX/index.js",
+      "file": "vue3-useanimations_dist_types_lib_searchToX.js",
+      "fileHash": "a7965457",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/settings": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/settings/index.js",
+      "file": "vue3-useanimations_dist_types_lib_settings.js",
+      "fileHash": "2033eaed",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/download": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/download/index.js",
+      "file": "vue3-useanimations_dist_types_lib_download.js",
+      "fileHash": "57ace289",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/trash": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/trash/index.js",
+      "file": "vue3-useanimations_dist_types_lib_trash.js",
+      "fileHash": "5847e46e",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/copy": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/copy/index.js",
+      "file": "vue3-useanimations_dist_types_lib_copy.js",
+      "fileHash": "ff7f77ca",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/help": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/help/index.js",
+      "file": "vue3-useanimations_dist_types_lib_help.js",
+      "fileHash": "0e41ca33",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/alertCircle": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/alertCircle/index.js",
+      "file": "vue3-useanimations_dist_types_lib_alertCircle.js",
+      "fileHash": "4cbca176",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/maximizeMinimize": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/maximizeMinimize/index.js",
+      "file": "vue3-useanimations_dist_types_lib_maximizeMinimize.js",
+      "fileHash": "05a3c33f",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/notification": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/notification/index.js",
+      "file": "vue3-useanimations_dist_types_lib_notification.js",
+      "fileHash": "9e556b25",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/notification3": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/notification3/index.js",
+      "file": "vue3-useanimations_dist_types_lib_notification3.js",
+      "fileHash": "2d1bcf3b",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/notification4": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/notification4/index.js",
+      "file": "vue3-useanimations_dist_types_lib_notification4.js",
+      "fileHash": "1abf1f9b",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/userPlus": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/userPlus/index.js",
+      "file": "vue3-useanimations_dist_types_lib_userPlus.js",
+      "fileHash": "bf268dde",
+      "needsInterop": true
+    },
+    "vue3-useanimations/dist/types/lib/userMinus": {
+      "src": "../../../node_modules/.pnpm/vue3-useanimations@0.0.18/node_modules/vue3-useanimations/dist/types/lib/userMinus/index.js",
+      "file": "vue3-useanimations_dist_types_lib_userMinus.js",
+      "fileHash": "dd22873c",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-WICYTZ2N": {
+      "file": "chunk-WICYTZ2N.js"
+    },
+    "chunk-4EOJPDL2": {
+      "file": "chunk-4EOJPDL2.js"
+    }
+  }
+}

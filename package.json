@@ -1,80 +1,23 @@
 {
-  "name": "vue3-useanimations",
-  "version": "0.0.14",
-  "description": "vue3-useanimations is a collection of free animated open source icons for vue.js.",
+  "name": "docs",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "test": "jest",
-    "build": "vitepress build",
-    "docs:dev": "vitepress dev",
-    "dev": "vitepress dev --port=4005",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/blackdous/vue3-useanimations.git"
-  },
-  "keywords": [
-    "Vue3",
-    "TypeScript",
-    "useAnimations",
-    "Icons",
-    "lottie"
-  ],
-  "author": "@blockdous",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/blackdous/vue3-useanimations/issues"
-  },
-  "homepage": "https://github.com/blackdous/vue3-useanimations#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run build && npm run test:all",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "jest": {
-    "testURL": "http://localhost/"
+    "dev": "vite --port=4008",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^10.1.2",
     "ant-design-vue": "^3.2.20",
-    "core-js": "^3.30.2",
-    "lottie-web": "^5.11.0",
+    "vue": "^3.2.47",
     "vue3-useanimations": "^0.0.18"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.1",
-    "@types/node": "^20.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@typescript-eslint/parser": "^5.59.6",
-    "@vue/compiler-sfc": "^3.3.4",
-    "@vue/test-utils": "^2.3.2",
-    "conventional-changelog-cli": "^2.2.2",
-    "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.8",
-    "rimraf": "^5.0.1",
-    "ts-jest": "^29.1.0",
-    "tslib": "^2.5.2",
-    "typescript": "^5.0.4",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "typescript": "^5.0.2",
     "vite": "^4.3.9",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-dts": "^1.4.3",
-    "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vitepress": "1.0.0-beta.1",
-    "vue": "^3.2.47",
     "vue-tsc": "^1.4.2"
   }
 }

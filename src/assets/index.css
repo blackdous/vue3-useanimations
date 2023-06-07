@@ -1,0 +1,95 @@
+.disFlex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.iconItem {
+  /* flex: 1; */
+  position: relative;
+  border-radius: 8px;
+  padding-top: 5px;
+  background-color: #fafafa;
+  transition: .3s;
+  display: inline-flex;
+  width: 220px;
+  height: 80px;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  align-items: center;
+}
+.iconItem-icon {
+  margin-right: 10px;
+}
+.iconItem-info {
+  align-self: start;
+  /* padding: 0 20px; */
+}
+.iconItem-effectType {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 10px;
+  line-height: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.iconItem-name {
+  position: relative;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.iconItem-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 4px;
+  color: #fff;
+  background-color: #1991eb;
+  box-shadow: 0 8px 14px rgba(33,33,33,.1);
+  border-radius: 16px;
+}
+
+.iconItem-download {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: 7px;
+  bottom: -15px;
+  color: #fff;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 19px;
+  background-color: #1991eb;
+  box-shadow: 0 8px 14px rgba(33,33,33,.1);
+  text-decoration: none;
+}
+.iconItem-download:hover {
+  color: #fff;
+}
+.wrap.w50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.wrap {
+  display: block;
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.iconItem:hover .iconItem-download {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}

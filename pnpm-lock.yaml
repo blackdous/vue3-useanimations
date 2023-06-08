@@ -15,8 +15,8 @@ dependencies:
     specifier: ^3.2.47
     version: 3.2.47
   vue3-useanimations:
-    specifier: ^0.0.18
-    version: 0.0.18
+    specifier: ^0.0.19
+    version: 0.0.19
 
 devDependencies:
   '@vitejs/plugin-vue':
@@ -841,8 +841,8 @@ packages:
       vue: 3.2.47
     dev: false
 
-  /vue3-useanimations@0.0.18:
-    resolution: {integrity: sha512-3lT5Q9xSvqBtdeH2KZFlF8QGcteTlR0SUSTbHu1RAaJnxC9lK3v5LlHJmuG739+RVer57w2isGgzaxCG2VxTTA==}
+  /vue3-useanimations@0.0.19:
+    resolution: {integrity: sha512-ZroDr+iPpSaBTr8GlXbcAYo2iV/8PkkwaWRLH/RCThpXMmtLUJEpQDc1vb6OsSC7fQ8/N9Xsc8bHJgz20vyX4Q==}
     dependencies:
       core-js: 3.30.2
       lottie-web: 5.12.0

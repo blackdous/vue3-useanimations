@@ -41,6 +41,8 @@
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
+  margin-bottom: 0;
+  padding-top: 10px;
 }
 .iconItem-copy {
   position: absolute;

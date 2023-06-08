@@ -12,7 +12,6 @@
   <Space>
     <div class="disFlex"> 
       <UseAnimations :animation="download" :size="56"></UseAnimations>
-      <UseAnimations :animation="copy" :size="56"></UseAnimations>
     </div>
   </Space>
   <div> HOVER_PLAY_AND_BACKWARDS </div>
@@ -26,6 +25,7 @@
   <Space>
     <UseAnimations :animation="userPlus" :size="56"></UseAnimations>
     <UseAnimations :animation="userMinus" :size="56"></UseAnimations>
+    <UseAnimations :animation="copy" :size="56"></UseAnimations>
   </Space>
   <div> LOOP_PLAY </div>
   <Space>

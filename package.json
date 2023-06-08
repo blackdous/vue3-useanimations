@@ -1,6 +1,6 @@
 {
   "name": "vue3-useanimations",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "vue3-useanimations is a collection of free animated open source icons for vue.js.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",

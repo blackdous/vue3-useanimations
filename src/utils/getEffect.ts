@@ -23,7 +23,7 @@ const animations: Animations = {
   checkBox: 'CLICK_PLAY_AND_BACKWARDS',
   checkmark: 'LOOP_PLAY',
   codepen: 'HOVER_PLAY_AND_STOP',
-  copy: 'CLICK_PLAY',
+  copy: 'HOVER_PLAY_AND_BACKWARDS',
   download: 'CLICK_PLAY',
   dribbble: 'HOVER_PLAY_AND_BACKWARDS',
   edit: 'CLICK_PLAY',
@@ -90,8 +90,8 @@ const animations: Animations = {
   volume: 'CLICK_PLAY_AND_BACKWARDS',
   youtube: 'HOVER_PLAY_AND_STOP',
   youtube2: 'HOVER_PLAY_AND_STOP',
-  zoomIn: 'LOOP_PLAY',
-  zoomOut: 'LOOP_PLAY',
+  zoomIn: 'HOVER_PLAY_AND_BACKWARDS',
+  zoomOut: 'HOVER_PLAY_AND_BACKWARDS',
 };
 
 const getEffect = (animationKey: AnimationKey) => animations[animationKey] || '';

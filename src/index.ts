@@ -65,7 +65,6 @@ const UseAnimations = defineComponent({
       height: `${size}px`,
       cursor: 'pointer',
       display: 'inline-block',
-      class: `'useAnimation-inner useAnimation-${animationKey}`,
       ...wrapperStyle,
     }
 
@@ -191,6 +190,7 @@ const UseAnimations = defineComponent({
         ref: refCur,
         ...other,
         style: defaultStyles,
+        class: `'useAnimation-inner useAnimation-${animationKey}`,
       }
     })
     

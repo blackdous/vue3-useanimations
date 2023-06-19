@@ -193,7 +193,7 @@ const UseAnimations = defineComponent({
         ...other,
         style: defaultStyles,
         //@ts-check
-        class: `'useAnimation-inner useAnimation-${animationKey}`
+        class: `useAnimation-inner useAnimation-${animationKey}`
       }
     })
     

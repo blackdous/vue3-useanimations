@@ -26,7 +26,7 @@ Basic usage
 import CreateApp from 'vue';
 import UseAnimations from 'vue3-useanimations';
 // EVERY ANIMATION NEEDS TO BE IMPORTED FIRST -> YOUR BUNDLE WILL INCLUDE ONLY WHAT IT NEEDS
-import github from 'vue3-useanimations/lib/github'
+import github from 'vue3-useanimations/dist/lib/github'
 
 const App = () => <UseAnimations animation={github} />;
 
@@ -75,7 +75,7 @@ Controlled checkbox example
 <script lang='ts' setup>
 import { ref } from 'vue'
 import { UseAnimations } from 'vue3-useanimations'
-import radioButton from 'vue3-useanimations/dist/types/lib/radioButton'
+import radioButton from 'vue3-useanimations/dist/lib/radioButton'
 
 const checked = ref(false)
 
@@ -104,7 +104,7 @@ Animation wrapped in element (use render prop).
 <script lang='ts' setup>
 import { h } from 'vue'
 import { UseAnimations } from 'vue3-useanimations'
-import heart from 'vue3-useanimations/dist/types/lib/heart'
+import heart from 'vue3-useanimations/dist/lib/heart'
 
 const renderFunc = (eventProps: any, animationProps: any) => {
   return h('button', {

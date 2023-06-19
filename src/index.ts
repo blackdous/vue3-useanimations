@@ -36,7 +36,7 @@ export declare type PropsType = Partial<ExtractPropTypes<typeof propsObj>>
 const UseAnimations = defineComponent({
   name: 'UseAnimations',
   props: propsObj,
-  setup (props) {
+  setup (props, { expose }) {
     const {
       // @ts-ignore
       animation: { animationData, animationKey },
@@ -166,6 +166,10 @@ const UseAnimations = defineComponent({
       }
     })
 
+    expose({
+      animationId
+    })
+
     watch([() => animation.value, () => speed], () => {
       if (animation.value) {
         //@ts-ignore
@@ -192,7 +196,6 @@ const UseAnimations = defineComponent({
         class: `useAnimation-inner useAnimation-${animationKey}`
       }
     })
-    
 
     return () => {
       return render ? render(eventProps.value, animationProps.value) : h('div', { ...eventProps.value, ...animationProps.value });

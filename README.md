@@ -55,6 +55,13 @@ These props are available:
 |  speed | `1` | a number to determine the speed of lottie(1 is normal speed) |
 |  effectType | - | `'CLICK_PLAY_AND_SEGMENTS' |  'CLICK_PLAY' | 'HOVER_PLAY_AND_STOP' | 'HOVER_PLAY_AND_BACKWARDS' | 'CLICK_PLAY_AND_BACKWARDS' ` |
 
+**expose**
+
+```javascript
+// use custom style
+ref.value.animationId
+```
+
 <br />
 Controlled checkbox example  
 

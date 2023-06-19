@@ -86,7 +86,7 @@ const UseAnimations = defineComponent({
           progressiveLoad: true,
           // lottie-web missing id type
           // @ts-ignore-next-line
-          id: animationId,
+          id: animationId.value,
         },
         ...options,
       };
@@ -103,7 +103,7 @@ const UseAnimations = defineComponent({
 
         if (sheet) {
           const animationRuleIndex = Array.from(sheet.cssRules).findIndex(
-            (rule: any) => rule.selectorText === `#${animationId} path`
+            (rule: any) => rule.selectorText === `#${animationId.value} path`
           );
 
           if (animationRuleIndex !== -1) {
@@ -120,7 +120,7 @@ const UseAnimations = defineComponent({
       window.requestAnimationFrame(() => {
         if (strokeColor || fillColor || pathCss) {
           try {
-            const css = `#${animationId} path { ${strokeColor ? `stroke: ${strokeColor};` : ''}  ${
+            const css = `#${animationId.value} path { ${strokeColor ? `stroke: ${strokeColor};` : ''}  ${
               fillColor ? `fill: ${fillColor};` : ''
             } ${pathCss || ''}}`;
             let sheetEl: any = document.getElementById('useAnimationsSheet');
@@ -161,10 +161,6 @@ const UseAnimations = defineComponent({
         })
         : undefined;
         
-      // console.log('getEffect(animationKey): ', getEffect(animationKey));
-      // console.log('curEvents: ', curEvents)
-      // console.log('animEffect: ', animEffect)
-    
       if (curEvents) {
         events.value = curEvents
       }

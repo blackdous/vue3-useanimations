@@ -6,6 +6,7 @@ import copy from 'rollup-plugin-copy'
 export default defineConfig({
   outDir: 'dist',
   build: {
+    sourcemap: true,
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: './src/index.ts',

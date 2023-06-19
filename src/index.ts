@@ -57,16 +57,18 @@ const UseAnimations = defineComponent({
     const animationId = ref<string>(getRandomId(animationKey))
     const events = ref<any>()
     const refCur = ref(null)
+    const animEffect: AnimationEffect = effectType || getEffect(animationKey) as AnimationEffect;
     const defaultStyles = {
       overflow: 'hidden',
       outline: 'none',
       width: `${size}px`,
       height: `${size}px`,
       cursor: 'pointer',
+      display: 'inline-block',
+      class: `'useAnimation-inner useAnimation-${animationKey}`,
       ...wrapperStyle,
     }
 
-    const animEffect: AnimationEffect = effectType || getEffect(animationKey) as AnimationEffect;
     onMounted(() => {
       // console.log('animEffect: ', animEffect);
 

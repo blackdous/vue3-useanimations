@@ -1,7 +1,7 @@
-import activity from 'vue3-useanimations/dist/types/lib/activity'
-import arrowDown from 'vue3-useanimations/dist/types/lib/arrowDown'
-import arrowUp from 'vue3-useanimations/dist/types/lib/arrowUp'
-import scrollDown from 'vue3-useanimations/dist/types/lib/scrollDown'
+import activity from 'vue3-useanimations/dist/lib/activity'
+import arrowDown from 'vue3-useanimations/dist/lib/arrowDown'
+import arrowUp from 'vue3-useanimations/dist/lib/arrowUp'
+import scrollDown from 'vue3-useanimations/dist/lib/scrollDown'
 
 export const other = [
   {

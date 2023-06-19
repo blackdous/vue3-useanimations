@@ -1,11 +1,11 @@
-import menu from 'vue3-useanimations/dist/types/lib/menu'
-import menu2 from 'vue3-useanimations/dist/types/lib/menu2'
-import menu3 from 'vue3-useanimations/dist/types/lib/menu3'
-import menu4 from 'vue3-useanimations/dist/types/lib/menu4'
-import arrowLeftCircle from 'vue3-useanimations/dist/types/lib/arrowLeftCircle'
-import arrowUpCircle from 'vue3-useanimations/dist/types/lib/arrowUpCircle'
-import arrowRightCircle from 'vue3-useanimations/dist/types/lib/arrowRightCircle'
-import arrowDownCircle from 'vue3-useanimations/dist/types/lib/arrowDownCircle'
+import menu from 'vue3-useanimations/dist/lib/menu'
+import menu2 from 'vue3-useanimations/dist/lib/menu2'
+import menu3 from 'vue3-useanimations/dist/lib/menu3'
+import menu4 from 'vue3-useanimations/dist/lib/menu4'
+import arrowLeftCircle from 'vue3-useanimations/dist/lib/arrowLeftCircle'
+import arrowUpCircle from 'vue3-useanimations/dist/lib/arrowUpCircle'
+import arrowRightCircle from 'vue3-useanimations/dist/lib/arrowRightCircle'
+import arrowDownCircle from 'vue3-useanimations/dist/lib/arrowDownCircle'
 
 
 export const navigation = [

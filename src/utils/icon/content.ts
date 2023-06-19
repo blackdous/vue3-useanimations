@@ -1,10 +1,10 @@
-import archive from 'vue3-useanimations/dist/types/lib/archive'
-import mail from 'vue3-useanimations/dist/types/lib/mail'
-import copy from 'vue3-useanimations/dist/types/lib/copy'
-import userX from 'vue3-useanimations/dist/types/lib/userX'
-import userMinus from 'vue3-useanimations/dist/types/lib/userMinus'
-import userPlus from 'vue3-useanimations/dist/types/lib/userPlus'
-import share from 'vue3-useanimations/dist/types/lib/share'
+import archive from 'vue3-useanimations/dist/lib/archive'
+import mail from 'vue3-useanimations/dist/lib/mail'
+import copy from 'vue3-useanimations/dist/lib/copy'
+import userX from 'vue3-useanimations/dist/lib/userX'
+import userMinus from 'vue3-useanimations/dist/lib/userMinus'
+import userPlus from 'vue3-useanimations/dist/lib/userPlus'
+import share from 'vue3-useanimations/dist/lib/share'
 
 export const content = [
   {

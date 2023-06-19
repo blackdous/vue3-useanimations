@@ -1,7 +1,7 @@
-import notification from 'vue3-useanimations/dist/types/lib/notification'
-import notification2 from 'vue3-useanimations/dist/types/lib/notification2'
-import notification3 from 'vue3-useanimations/dist/types/lib/notification3'
-import notification4 from 'vue3-useanimations/dist/types/lib/notification4'
+import notification from 'vue3-useanimations/dist/lib/notification'
+import notification2 from 'vue3-useanimations/dist/lib/notification2'
+import notification3 from 'vue3-useanimations/dist/lib/notification3'
+import notification4 from 'vue3-useanimations/dist/lib/notification4'
 
 
 export const notifications = [

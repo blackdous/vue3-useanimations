@@ -1,8 +1,8 @@
-import loading from 'vue3-useanimations/dist/types/lib/loading'
-import loading2 from 'vue3-useanimations/dist/types/lib/loading2'
-import loading3 from 'vue3-useanimations/dist/types/lib/loading3'
-import infinity from 'vue3-useanimations/dist/types/lib/infinity'
-import loading4 from 'vue3-useanimations/dist/types/lib/loading4'
+import loading from 'vue3-useanimations/dist/lib/loading'
+import loading2 from 'vue3-useanimations/dist/lib/loading2'
+import loading3 from 'vue3-useanimations/dist/lib/loading3'
+import infinity from 'vue3-useanimations/dist/lib/infinity'
+import loading4 from 'vue3-useanimations/dist/lib/loading4'
 
 export const loadings = [
   {

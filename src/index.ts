@@ -62,6 +62,7 @@ const UseAnimations = defineComponent({
       outline: 'none',
       width: `${size}px`,
       height: `${size}px`,
+      cursor: 'pointer',
       ...wrapperStyle,
     }
 

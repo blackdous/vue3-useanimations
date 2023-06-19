@@ -8,6 +8,8 @@ import type { Animation, AnimationEffect } from './utils';
 const getRandomId = (key: Animation['animationKey']) =>
   `${key}_i${Math.floor(Math.random() * 10000 + 1)}`;
 
+
+
 const propsObj = {
   effectType: {
     type: String as PropType<AnimationEffect>
@@ -190,7 +192,8 @@ const UseAnimations = defineComponent({
         ref: refCur,
         ...other,
         style: defaultStyles,
-        class: `'useAnimation-inner useAnimation-${animationKey}`,
+        //@ts-check
+        class: `'useAnimation-inner useAnimation-${animationKey}`
       }
     })
     

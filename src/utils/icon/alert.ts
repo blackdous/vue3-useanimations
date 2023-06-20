@@ -1,9 +1,9 @@
-import alertCircle from 'vue3-useanimations/dist/lib/alertCircle'
-import alertOctagon from 'vue3-useanimations/dist/lib/alertOctagon'
-import alertTriangle from 'vue3-useanimations/dist/lib/alertTriangle'
-import error from 'vue3-useanimations/dist/lib/error'
-import help from 'vue3-useanimations/dist/lib/help'
-import checkmark from 'vue3-useanimations/dist/lib/checkmark'
+import alertCircle from 'vue3-useanimations/dist/types/lib/alertCircle'
+import alertOctagon from 'vue3-useanimations/dist/types/lib/alertOctagon'
+import alertTriangle from 'vue3-useanimations/dist/types/lib/alertTriangle'
+import error from 'vue3-useanimations/dist/types/lib/error'
+import help from 'vue3-useanimations/dist/types/lib/help'
+import checkmark from 'vue3-useanimations/dist/types/lib/checkmark'
 
 export const alert = [
   {

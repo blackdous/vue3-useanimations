@@ -1,6 +1,6 @@
-import checkBox from 'vue3-useanimations/dist/lib/checkBox'
-import radioButton from 'vue3-useanimations/dist/lib/radioButton'
-import toggle from 'vue3-useanimations/dist/lib/toggle'
+import checkBox from 'vue3-useanimations/dist/types/lib/checkBox'
+import radioButton from 'vue3-useanimations/dist/types/lib/radioButton'
+import toggle from 'vue3-useanimations/dist/types/lib/toggle'
 
 
 

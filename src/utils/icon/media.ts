@@ -1,13 +1,13 @@
-import airplay from 'vue3-useanimations/dist/lib/airplay'
-import volume from 'vue3-useanimations/dist/lib/volume'
-import microphone from 'vue3-useanimations/dist/lib/microphone'
-import microphone2 from 'vue3-useanimations/dist/lib/microphone2'
-import video from 'vue3-useanimations/dist/lib/video'
-import video2 from 'vue3-useanimations/dist/lib/video2'
-import playPauseCircle from 'vue3-useanimations/dist/lib/playPauseCircle'
-import playPause from 'vue3-useanimations/dist/lib/playPause'
-import skipBack from 'vue3-useanimations/dist/lib/skipBack'
-import skipForward from 'vue3-useanimations/dist/lib/skipForward'
+import airplay from 'vue3-useanimations/dist/types/lib/airplay'
+import volume from 'vue3-useanimations/dist/types/lib/volume'
+import microphone from 'vue3-useanimations/dist/types/lib/microphone'
+import microphone2 from 'vue3-useanimations/dist/types/lib/microphone2'
+import video from 'vue3-useanimations/dist/types/lib/video'
+import video2 from 'vue3-useanimations/dist/types/lib/video2'
+import playPauseCircle from 'vue3-useanimations/dist/types/lib/playPauseCircle'
+import playPause from 'vue3-useanimations/dist/types/lib/playPause'
+import skipBack from 'vue3-useanimations/dist/types/lib/skipBack'
+import skipForward from 'vue3-useanimations/dist/types/lib/skipForward'
 
 
 

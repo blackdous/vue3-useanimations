@@ -8,7 +8,7 @@
     <h3>使用</h3>
     <pre>
       import UseAnimations from 'vue3-useanimations'
-      import visibility from 'vue3-useanimations/dist/lib/visibility'
+      import visibility from 'vue3-useanimations/dist/types/lib/visibility'
       <span v-text="'<UseAnimations :animation=visibility :size=40></UseAnimations>'"></span>
     </pre>
   </div>
